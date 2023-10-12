@@ -178,7 +178,7 @@
     var marker = L.marker([28.6139, 77.2156], {
         title: "Hi! I'm in Jaipur",
     }).addTo(map)
-        .bindPopup('<h1>JANTAR MANTAR </h1> <p> Jantar Mantar refers to a collection of architectural astronomical observatories in India, constructed during the 18th century. These observatories were built by Maharaja Jai Singh II, a Rajput king and astronomer, in order to study the heavens and make accurate astronomical calculations. </p> <img src="./jantar.jpg" style="width: 290px">', {
+        .bindPopup('<h1>JANTAR MANTAR </h1> <p> Jantar Mantar refers to a collection of architectural astronomical observatories in India, constructed during the 18th century. These observatories were built by Maharaja Jai Singh II, a Rajput king and astronomer, in order to study the heavens and make accurate astronomical calculations. </p> <img src="./Jantar.jpg" style="width: 290px">', {
             maxWidth: 300, // Set the maximum width of the popup
             maxHeight: 400, // Set the maximum height of the popup
         })
@@ -239,30 +239,7 @@
     }).addTo(map)
 
 
-    // layer controller
-    var baseMaps = {
-        "OpenStreetMap": osm,
-        "Dark mode ": Drk_map,
-        " Google satellite map": googleSat,
-        "Google terrain map": googleTerrain,
-        " World imagery map": Esri_WorldImagery
-    };
-
-    var overlayMaps = {
-
-        "India": indiadata
-
-    };
-
-    var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
-
-    // Zoom to feature when checkbox is clicked
-    layerControl._layers.forEach(function (obj) {
-        obj.layer.on('add', function () {
-            map.fitBounds(obj.layer.getBounds());
-        });
-    });
-
+ 
 
 
 </script>
